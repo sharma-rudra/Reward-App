@@ -135,6 +135,20 @@ You can now use the application locally!
 [Link](https://web.postman.co/workspace/My-Workspace~cce9876a-efae-4afd-8f1d-758b698a7ac1/collection/47936145-8fb67936-e7c6-4762-91d5-4d2d0628432b?action=share&source=copy-link&creator=47936145)
 
 
+## ⛁Database Schema
+
+| Column Name   | Data Type | Constraints           | Description                                       |
+|---------------|-----------|-----------------------|---------------------------------------------------|
+| Id            | char      | Primary Key, Not Null | A unique identifier (GUID) for each member.       |
+| FirstName     | varchar   | Not Null              | The first name of the member.                     |
+| LastName      | varchar   | Not Null              | The last name of the member.                      |
+| MobileNumber  | varchar   | Unique, Not Null      | The member's mobile number, used for login.       |
+| Otp           | longtext  | Nullable              | The temporary One-Time Password for login.        |
+| OtpExpiryTime | datetime  | Nullable              | The timestamp when the OTP will expire.           |
+| Points        | int       | Not Null              | The current reward points balance for the member. |
+| Role          | varchar   | Not Null              | The role of the user, either "User" or "Admin".   |
+
+
 ## Default Credentials
 
 The application is pre-configured with a default admin user.
